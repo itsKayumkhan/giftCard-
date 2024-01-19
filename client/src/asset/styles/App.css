@@ -1,0 +1,90 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 14px;
+  border: 3px solid var(--scrollColorP);
+}
+
+.categoryNav::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 14px;
+  border: 3px solid white;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ribbon {
+    /* position: relative; */
+    margin: 5rem auto 5rem;
+  }
+  
+  .ribbon::before, .ribbon::after {
+    content: '';
+    width: 80px;
+    height: 100%;
+    background-color: #26303d;
+  
+    /* position ribbon ends behind and slightly lower */
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    
+    /* clip ribbon end shape */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
+  
+    /* draw and position the folded ribbon bit */
+    background-image: linear-gradient(45deg, transparent 50%, #647d9d 50%);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  
+  .ribbon::before {
+    left: -60px;
+  }
+  
+  .ribbon::after {
+    right: -60px;
+    transform: scaleX(-1); /* flip horizontally */
+  }
+  
+  
+  @media (max-width: 400px) {
+    .ribbon { font-size: 1.5rem; }
+  }
+  
+  .btn2 span:first-child{
+    transform: translateX(-101%);
+    transition: transform .5s ease-in
+  }
+  .btn2:hover span{
+    transform: translateX(0)
+  }
+
+
+  .active{
+    color:rgb(148, 28, 234);
+    border:1px solid rgb(83, 14, 132);
+  }
