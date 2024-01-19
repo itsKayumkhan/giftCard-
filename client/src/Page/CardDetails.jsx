@@ -99,7 +99,7 @@ const CardDetails = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full w-full">
           <div className="flex flex-col md:flex-row -mx-4 gap-3">
             <div className="md:flex-1 px-4 relative w-[30%]">
-              <div className="h-[460px] rounded-lg bg-gray-300 mb-4 w-full z-1">
+              <div className="h-[460px] rounded-lg bg-gray-300 mb-4 w-[400%] md:w-full z-1">
                 <ImgSlider />
               </div>
               <div className="flex items-center absolute top-3 right-10 bg-pink-600 text-white p-2 rounded-md">
@@ -107,8 +107,9 @@ const CardDetails = () => {
                 <h1 className="ms-2">{`(number of reviews 1.2k)`}</h1>
               </div>
             </div>
+
             <div className="md:flex-1 px-4 justify-around md:flex flex-col h-screen md:h-96 space-y-4">
-              <h2 className="text-xl font-bold text-gray-800 mb-2 uppercase  h-[20%]">
+              <h2 className="text-xl font-bold text-gray-800 mb-2 uppercase top-12 relative  md:top-0 h-[20%]">
                 {product.name}
               </h2>
 
@@ -186,7 +187,7 @@ const CardDetails = () => {
                     </div> */}
                 </div>
               ) : (
-                <div class="w-full pt-2 mx-auto  h-[10%]">
+                <div class="w-full pt-2 mx-auto  h-[10%] relative bottom-28 md:top-10">
                   <div class="flex p-5 rounded-lg shadow bg-white">
                     <div>
                       <svg
@@ -197,7 +198,7 @@ const CardDetails = () => {
                         <path d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z" />
                       </svg>
                     </div>
-                    <div class="ml-3 ">
+                    <div class="ml-3">
                       <h2 class="font-semibold text-xl text-gray-800">
                         Warning Alert Title
                       </h2>

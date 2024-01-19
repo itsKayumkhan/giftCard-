@@ -23,7 +23,7 @@
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.13.5",
         "nodemailer": "^6.9.8",
-        "nodemon": "^3.0.2",
+        "nodemon": "^3.0.3",
         "razorpay": "^2.9.2",
         "universal-cookie": "^7.0.1",
         "validator": "^13.6.0"
