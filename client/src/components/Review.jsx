@@ -9,9 +9,9 @@ const Review = ({ product }) => {
  
   return (
     <>
-      <div className="px-10 w-full flex justify-center mt-10 flex-col lg:flex-row">
+      <div className="px-10 w-full flex justify-center mt-20 flex-col lg:flex-row">
         <div className="lg:w-[60%] flex items-start justify-evenly flex-col">
-          <h1 className="text-xl font-bold my-5  w-1/2">CUSTOMER REVIEWS</h1>
+          <h1 className="lg:text-xl font-bold my-5 w-full lg:w-1/2">CUSTOMER REVIEWS</h1>
           <hr className="h-1 bg-pink-600 w-1/2 rounded-e-md" />
 
           <div className="w-full h-96 overflow-scroll ">

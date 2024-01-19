@@ -83,9 +83,8 @@ const CardDetails = () => {
         // itemsPrice: total,
         userId: user?._id,
         shippingPrice: 40,
-        amount: productCount * product.price + 40,
+        amount: (productCount * product.price )+ 40,
       };
-
       // Dispatching the order creation action
       dispatch(createOrder(order));
     } catch (error) {
@@ -98,8 +97,8 @@ const CardDetails = () => {
       <div className="bg-white py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full w-full">
           <div className="flex flex-col md:flex-row -mx-4 gap-3">
-            <div className="md:flex-1 px-4 relative w-[30%]">
-              <div className="h-[460px] rounded-lg bg-gray-300 mb-4 w-[400%] md:w-full z-1">
+            <div className="md:flex-1 px-4 relative w-full lg:w-[30%]">
+              <div className="rounded-lg  mb-4 w-full z-1">
                 <ImgSlider />
               </div>
               <div className="flex items-center absolute top-3 right-10 bg-pink-600 text-white p-2 rounded-md">
@@ -107,13 +106,12 @@ const CardDetails = () => {
                 <h1 className="ms-2">{`(number of reviews 1.2k)`}</h1>
               </div>
             </div>
-
-            <div className="md:flex-1 px-4 justify-around md:flex flex-col h-screen md:h-96 space-y-4">
-              <h2 className="text-xl font-bold text-gray-800 mb-2 uppercase top-12 relative  md:top-0 h-[20%]">
+            <div className="md:flex-1 px-4 justify-around md:flex flex-col h-[120vh] space-y-4">
+              <h2 className="text-xl font-bold text-gray-800 mb-2 uppercase  h-[20%]">
                 {product.name}
               </h2>
 
-              <div className="md:flex mb-4 items-center justify-start  h-[15%]">
+              <div className="md:flex mb-4 items-center justify-start  h-[10%]">
                 <div className="mr-4 flex items-center">
                   <span className="font-bold text-gray-700 me -2 text-lg">
                     Price:
@@ -135,7 +133,7 @@ const CardDetails = () => {
                   </>
                 </div>
               </div>
-              <div className="flex  items-center  h-[15%]">
+              <div className="flex  items-center  h-[10%]">
                 <span className="mr-3">Quantity</span>
                 <div className="relative flex w-36 border-2 border-pink-600">
                   <div
@@ -163,7 +161,7 @@ const CardDetails = () => {
                 </div>
               </div>
 
-              <div className=" h-[50%]">
+              <div className="h-[50%]">
                 <span className="font-bold text-gray-700">
                   Product Description:
                 </span>
@@ -180,14 +178,10 @@ const CardDetails = () => {
                       Buy Now
                     </button>
                   </div>
-                  {/* <div className="w-1/2 px-2">
-                      <button className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-full font-bold hover:bg-gray-300">
-                        Buy Now
-                      </button>
-                    </div> */}
+                
                 </div>
               ) : (
-                <div class="w-full pt-2 mx-auto  h-[10%] relative bottom-28 md:top-10">
+                <div class="w-full pt-2 mx-auto  h-[10%]">
                   <div class="flex p-5 rounded-lg shadow bg-white">
                     <div>
                       <svg
@@ -198,7 +192,7 @@ const CardDetails = () => {
                         <path d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z" />
                       </svg>
                     </div>
-                    <div class="ml-3">
+                    <div class="ml-3 ">
                       <h2 class="font-semibold text-xl text-gray-800">
                         Warning Alert Title
                       </h2>
@@ -221,7 +215,7 @@ const CardDetails = () => {
           <div className="absolute top-0 center flex-col w-full h-full z-10">
             <div className=" bg-black opacity-10 absolute top-0 left-0 w-full h-full z-0"></div>
             <div
-              className="z-10  top-10 right-28 text-xl p-4 absolute bg-white w-12 h-12 rounded-full  transition-all text-black flex items-center justify-center hover:bg-slate-600 hover:border-2 hover:text-white duration-100"
+              className="z-10 top-0 left-0   lg:top-10 lg:right-28 text-xl p-4 absolute bg-black w-12 h-12 rounded-full  transition-all text-black flex items-center justify-center hover:bg-slate-600 hover:border-2 hover:text-white duration-100"
               onClick={() => setShipping(false)}>
               <i className="fa-solid fa-xmark"></i>
             </div>

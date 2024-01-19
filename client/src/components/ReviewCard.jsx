@@ -12,7 +12,7 @@ const ReviewCard = ({ review }) => {
   // },[dispatch])
   return (
     <>
-      <div className="flex ">
+      <div className="flex flex-col lg:flex-row mt-10">
         <div className="rounded-md my-5 w-full flex flex-col lg:flex-row p-5 justify-evenly bg-slate-300">
           <div className="lg:w-[30%] w-full flex items-center gap-3">
             <img
@@ -31,7 +31,7 @@ const ReviewCard = ({ review }) => {
             <div className="line-clamp-3 w-full">{review?.comment}</div>
           </div>
         </div>
-        <div className="w-1/2 h-full center p-4 ">
+        <div className="lg:w-1/2 h-full center p-4 ">
           <img
             src={review.photo}
             alt="*img"
