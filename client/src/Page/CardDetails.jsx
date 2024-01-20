@@ -99,24 +99,24 @@ const CardDetails = () => {
           <div className="flex flex-col md:flex-row -mx-4 gap-3">
             <div className="md:flex-1 px-4 relative w-full lg:w-[30%]">
               <div className="rounded-lg  mb-4 w-full z-1">
-                <ImgSlider />
+                <img src="https://storage.myphotoprint.in/products/2310241636554161.jpeg" alt="" />
               </div>
               <div className="flex items-center absolute top-3 right-10 bg-pink-600 text-white p-2 rounded-md">
                 <Stars star="4" />
                 <h1 className="ms-2">{`(number of reviews 1.2k)`}</h1>
               </div>
             </div>
-            <div className="md:flex-1 px-4 justify-around md:flex flex-col h-[120vh] space-y-4">
-              <h2 className="text-xl font-bold text-gray-800 mb-2 uppercase  h-[20%]">
+            <div className="md:flex-1 px-4 justify-around md:flex flex-col h-[90vh] space-y-4">
+              <h2 className="text-xl font-bold text-gray-800 uppercase  ">
                 {product.name}
               </h2>
 
-              <div className="md:flex mb-4 items-center justify-start  h-[10%]">
-                <div className="mr-4 flex items-center">
-                  <span className="font-bold text-gray-700 me -2 text-lg">
+              <div className="md:flex mb-4 items-center justify-start  ">
+                <div className="mr-4 flex items-center text-xl">
+                  <span className="font-bold text-gray-700 me-2">
                     Price:
                   </span>
-                  <span className="text-gray-600">₹{product.price} </span>
+                  <span className="text-gray-600 text-4xl">₹{product.price} </span>
                   <span className="text-gray-600 ps-2">
                     <s>₹699</s>
                   </span>
@@ -133,7 +133,7 @@ const CardDetails = () => {
                   </>
                 </div>
               </div>
-              <div className="flex  items-center  h-[10%]">
+              <div className="flex  items-center  ">
                 <span className="mr-3">Quantity</span>
                 <div className="relative flex w-36 border-2 border-pink-600">
                   <div
@@ -161,7 +161,7 @@ const CardDetails = () => {
                 </div>
               </div>
 
-              <div className="h-[50%]">
+              <div className="">
                 <span className="font-bold text-gray-700">
                   Product Description:
                 </span>
@@ -170,7 +170,7 @@ const CardDetails = () => {
                 </p>
               </div>
               {isAuthenticated ? (
-                <div className="flex -mx-2 mb-4 h-[10%]">
+                <div className="flex -mx-2 mb-4 ]">
                   <div className="w-1/2 px-2">
                     <button
                       onClick={() => setShipping(true)}

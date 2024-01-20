@@ -13,8 +13,8 @@ const ReviewCard = ({ review }) => {
   return (
     <>
       <div className="flex flex-col lg:flex-row mt-10">
-        <div className="rounded-md my-5 w-full flex flex-col lg:flex-row p-5 justify-evenly bg-slate-300">
-          <div className="lg:w-[30%] w-full flex items-center gap-3">
+        <div className="rounded-md my-5 w-full lg:flex flex-col lg:flex-row p-5 justify-evenly bg-slate-300">
+          <div className="lg:w-[40%] w-full flex items-center gap-3">
             <img
               src={USER_IMG_URL}
               alt="user img"

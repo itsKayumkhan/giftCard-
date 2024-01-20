@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Country, State } from "country-state-city";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +12,7 @@ const Shipping = ({payment}) => {
   const { shippingInfo } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const buyNow = useRef();
   const initial = {
     address: shippingInfo.address,
     city: shippingInfo.city,
@@ -88,6 +88,9 @@ const Shipping = ({payment}) => {
     if (isFormValid) {
       // Redirect to the confirmation page if the form is valid
       payment();
+      buyNow.disable =true;
+
+
     } else {
       // Show an error message or take any other action
       toast.error('Please fix the errors in the form.');
@@ -142,7 +145,7 @@ const Shipping = ({payment}) => {
                         <circle cx="8.5" cy={7} r={4} />
                         <path d="M20 8v6M23 11h-6" />
                       </svg>
-                      <span className="ml-3">Submit</span>
+                      <span className="ml-3" ref={buyNow}>Submit</span>
                     </button>
                   </div>
                   {/* {errors.pinCode && <p className="text-red-500 text-sm mt-1">{errors.pinCode}</p>} */}

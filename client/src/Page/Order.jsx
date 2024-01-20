@@ -15,7 +15,7 @@ const Order = () => {
     isAdmin ? s.allOrders : s.myOrders
   );
   const dispatch = useDispatch();
-
+console.log(shippingInfo)
   const handlePopOpen = (orderId) => {
     setPopups((prevPopups) => ({ ...prevPopups, [orderId]: true }));
   };
@@ -137,6 +137,14 @@ const Order = () => {
                                       {shippingInfo.city},
                                       {shippingInfo.state},
                                       {shippingInfo.country}
+                                    </p>
+                                  </div>
+                                  <div className="mb-2 flex justify-between">
+                                    <p className="text-gray-700">
+                                      Mobile number
+                                    </p>
+                                    <p className="text-gray-700 flex">
+                                    +91 {shippingInfo.phoneNo}
                                     </p>
                                   </div>
 
