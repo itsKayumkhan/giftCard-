@@ -1,5 +1,5 @@
-export const REACT_APP_API_URL = "http://localhost:8000/api/v1";
-// export const REACT_APP_API_URL= "https://e-commerce-eldm.onrender.com/api/v1"
+// export const REACT_APP_API_URL = "http://localhost:8000/api/v1";
+export const REACT_APP_API_URL= "https://giftcardbackend.onrender.com"
 export const GET_IMG = (id) => `${REACT_APP_API_URL}/product/photo/${id}`;
 
 export const LOADER_IMG_URL =
