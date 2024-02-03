@@ -12,7 +12,7 @@ const ReviewCard = ({ review }) => {
   // },[dispatch])
   return (
     <>
-      <div className="flex flex-col lg:flex-row mt-10">
+      {/* <div className="flex flex-col lg:flex-row mt-10">
         <div className="rounded-md my-5 w-full lg:flex flex-col lg:flex-row p-5 justify-evenly bg-slate-300">
           <div className="lg:w-[40%] w-full flex items-center gap-3">
             <img
@@ -37,6 +37,16 @@ const ReviewCard = ({ review }) => {
             alt="*img"
             className="w-full h-full object-cover rounded-lg"
           />
+        </div>
+      </div> */}
+      <div className="max-w-sm rounded overflow-hidden shadow-lg md:w-1/2 w-full lg:w-1/3 m-1">
+        <img className="w-full" src={review.photo} alt="Mountain" />
+        
+        <div className="px-6 py-4"> <span>
+            <Stars star={review?.rating} />
+          </span>
+          <div className="font-bold text-xl mb-2">{review?.user}</div>
+          <p className="text-gray-700 text-base">{review?.comment} </p>
         </div>
       </div>
     </>

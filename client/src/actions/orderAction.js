@@ -44,7 +44,7 @@ export const createOrder = (orderInfo) => async (dispatch) => {
       key,
       amount: order.totalAmount,
       currency: order.currency,
-      name: "E-commerce",
+      name: "Pink City gifts",
       description: "Purchase Description",
       order_id: order.id,
       handler: async (response) => {

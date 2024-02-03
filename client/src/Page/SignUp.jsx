@@ -116,7 +116,7 @@ const SignUp = () => {
                     </div>
                   </div>
                   <p className="mt-6 text-xs text-gray-600 text-center">
-                    I agree to abide by E-commerce
+                    I agree to abide by Pink City gifts
                     <a
                       href="#"
                       className="border-b border-gray-500 border-dotted"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
@@ -41,10 +41,6 @@ const Navbar = () => {
       fun: () => sendWhatsAppMessage(),
     },
     {
-      icon: <i class="fa-solid fa-circle-info"></i>,
-      name: "+91 6378492842",
-    },
-    {
       icon: <i class="fa-solid fa-right-from-bracket"></i>,
       name: "Sign Out",
       fun: () => handleSignOut(),
@@ -80,7 +76,7 @@ const Navbar = () => {
                     <>
                       {" "}
                       <Link
-                        className="block p-4 text-sm font-semibold text-gray-400 hover:bg-pink-500 hover:text-pink-200 rounded"
+                        className="block p-4 text-sm font-semibold text-gray-400 hover:bg-pink-500 hover:text-white duration-300 rounded"
                         to={`${item.to || "/"}`}
                         onClick={() => item.fun && item.fun}>
                         {item.icon} <span>{item.name}</span>
@@ -104,7 +100,7 @@ const Navbar = () => {
                 Sign In
               </Link>
               <Link
-                className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+                className="hidden lg:inline-block py-2 px-6 bg-pink-500 hover:bg-pink-600 text-sm text-white font-bold rounded-xl transition duration-200"
                 to="/register">
                 Sign up
               </Link>
@@ -138,13 +134,14 @@ const Navbar = () => {
                 </button>
               </div>
               <div>
-                <ul>
+               {isAuthenticated && <ul>
                   {ListItems.map((item) => (
                     <li className="mb-1">
                       {item.to ? (
                         <>
                           {" "}
                           <Link
+                          
                             className="block p-4 text-sm font-semibold text-gray-400 hover:bg-pink-500 hover:text-pink-200 rounded"
                             to={`${item.to || "/"}`}
                             onClick={() => item.fun && item.fun}>
@@ -160,7 +157,7 @@ const Navbar = () => {
                       )}
                     </li>
                   ))}
-                </ul>
+                </ul>}
               </div>
               {!isAuthenticated && (
                 <div className="mt-auto">
@@ -171,7 +168,7 @@ const Navbar = () => {
                       Log in
                     </Link>
                     <Link
-                      className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                      className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-pink-600 hover:bg-pink-700  rounded-xl"
                       to="/register">
                       Sign Up
                     </Link>

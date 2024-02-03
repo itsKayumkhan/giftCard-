@@ -87,8 +87,10 @@ const Shipping = ({payment}) => {
 
     if (isFormValid) {
       // Redirect to the confirmation page if the form is valid
+      toast.error("Please click only one time submit button 😊😊")
+      toast.success("Wait please 😊😊")
       payment();
-      buyNow.disable =true;
+      
 
 
     } else {

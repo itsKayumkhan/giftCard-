@@ -7,7 +7,6 @@ import Stars from "../components/Stars";
 import { addItemsToCart } from "./../actions/cartAction";
 import Shipping from "./Shipping";
 import { createOrder } from "../actions/orderAction";
-import ImgSlider from "../components/ImgSlider";
 
 const CardDetails = () => {
   const [productCount, setProductCount] = useState(1);
@@ -31,13 +30,13 @@ const CardDetails = () => {
     price: "299",
     reviews: [
       {
-        rating: 4.3,
+        rating: 3.5,
         user: "kayum khan",
         photo: "https://storage.myphotoprint.in/products/2311061839530752.jpg",
         comment: "cute gift at such a affordable price.",
       },
       {
-        rating: 4.3,
+        rating: 4.5,
         user: "Afreen",
         photo: "https://storage.myphotoprint.in/products/2311061842087300.jpg",
         comment: "memorable gift..thank you myphotoprint",
@@ -49,28 +48,28 @@ const CardDetails = () => {
         comment: "Bhot sahi h yr..",
       },
       {
-        rating: 4.3,
+        rating: 4,
         user: "lavu",
         photo: "https://storage.myphotoprint.in/reviews/f1.jpeg",
         comment: "niceeee",
       },
       {
-        rating: 4.3,
+        rating: 4.5,
         user: "MONOTOSH monssutradhar",
         photo: "https://storage.myphotoprint.in/reviews/f2.jpeg",
         comment: "cute gift at such a affordable price.",
       },
       {
-        rating: 4.3,
+        rating: 3.5,
         user: "Aishwarya Soni",
-        photo: "https://storage.myphotoprint.in/reviews/f1.jpeg",
+        photo: "https://storage.myphotoprint.in/reviews/f5.jpeg",
         comment:
           "1 Day late delivery but my boyfriend loved it..so I'm happy too",
       },
       {
-        rating: 4.3,
+        rating: 4,
         user: "Anwar",
-        photo: "https://storage.myphotoprint.in/reviews/f3.jpeg",
+        photo: "https://storage.myphotoprint.in/products/2310241636554161.jpeg",
         comment: "HAHA Good creativity",
       },
     ],
@@ -101,12 +100,12 @@ const CardDetails = () => {
               <div className="rounded-lg  mb-4 w-full z-1">
                 <img src="https://storage.myphotoprint.in/products/2310241636554161.jpeg" alt="" />
               </div>
-              <div className="flex items-center absolute top-3 right-10 bg-pink-600 text-white p-2 rounded-md">
+              <div className="flex items-center absolute -top-10 md:top-3 right-10 bg-pink-600 text-white p-2 rounded-md">
                 <Stars star="4" />
                 <h1 className="ms-2">{`(number of reviews 1.2k)`}</h1>
               </div>
             </div>
-            <div className="md:flex-1 px-4 justify-around md:flex flex-col h-[90vh] space-y-4">
+            <div className="md:flex-1 px-4 justify-around md:flex flex-col h-full space-y-4">
               <h2 className="text-xl font-bold text-gray-800 uppercase  ">
                 {product.name}
               </h2>
@@ -215,7 +214,7 @@ const CardDetails = () => {
           <div className="absolute top-0 center flex-col w-full h-full z-10">
             <div className=" bg-black opacity-10 absolute top-0 left-0 w-full h-full z-0"></div>
             <div
-              className="z-10 top-0 left-0   lg:top-10 lg:right-28 text-xl p-4 absolute bg-black w-12 h-12 rounded-full  transition-all text-black flex items-center justify-center hover:bg-slate-600 hover:border-2 hover:text-white duration-100"
+              className="z-10 top-10 right-0   lg:top-10 lg:right-28 text-xl p-4 absolute bg-white w-12 h-12 rounded-full  transition-all text-black flex items-center justify-center hover:bg-slate-600 hover:border-2 hover:text-white duration-100"
               onClick={() => setShipping(false)}>
               <i className="fa-solid fa-xmark"></i>
             </div>
@@ -224,7 +223,7 @@ const CardDetails = () => {
             </div>{" "}
           </div>
         )}
-        <div className="">
+        <div className="w-full  h-full">
           <Review product={product} />
         </div>
       </div>
